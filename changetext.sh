@@ -2,7 +2,7 @@
 for f in *.txt; do
 	declare -i x
 	x=$(wc -l <"$f")
-	if [ $x -wq 0 ]
+	if [ $x -eq 0 ]
 	then
 		rm -- "$f"
         elif [ $x -lt 10 ] && [ $x -gt 0 ]
